@@ -1,7 +1,7 @@
 # Author: Sven Reulen
 # Date: 13-11-2013
-# Dependencies: Set direction of data in line 12 
-# Description: Fourth exercise for the course Applied Geoscripting.  
+# Dependencies: 
+# Description: Fifth exercise for the course Applied Geoscripting.  
 # Variables:
 
 # Load library
