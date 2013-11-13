@@ -33,12 +33,12 @@ Mergetwoimages <- function(x, y){
 }
 
 # Function to vectorize the result of the average function
-VRandomFunction <- function(a, b) {
+Vectorized <- function(a, b) {
   out <- mapply(FUN=Mergetwoimages, a, b)
   return(out)
 }
 
 # Create new image
-averagedimage <- overlay(data_date1, data_date2, na.rm=TRUE, fun=VRandomFunction)
+averagedimage <- overlay(data_date1, data_date2, na.rm=TRUE, fun=Vectorized)
 plotRGB(averagedimage, 3,5,4)
 
