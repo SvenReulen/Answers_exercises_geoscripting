@@ -1,5 +1,5 @@
 # Author: Sven Reulen
-# Date: 19-11-2013
+# Date: 20-11-2013
 # Dependencies
 # Description: Seventh exercise of the course geoscripting
 # Variables
@@ -41,10 +41,11 @@ threelayerbrick <- brick(raster2000,raster2005,raster2010)
 cols <- c("yellow",  "green", "red")
 ?brewer.pal
 rtheme <- rasterTheme(region=cols)
+# plot them next to each other with good colors
 levelplot(threelayerbrick[[1:3]], names.attr=c('2000', '2005',  '2010'), par.settings=rtheme)
 # Produce an RGB composite with these three layers such that NDVI2000 = RED, NDVI2005=GREEN, NDVI2010 = BLUE
 plotRGB(threelayerbrick, 1,2,3, stretch='hist')
-# Testing which colour has the highest difference: Finding: Dark blue = big difference, a lot of colours together with dar blue in the center
+# Testing which colour has the highest difference: Finding: Dark blue = big difference, a lot of colours together with dark blue in the center
 ##x <- click(threelayerbrick, n=1)
 # Get two location extents
 ##e1 <- drawExtent()
