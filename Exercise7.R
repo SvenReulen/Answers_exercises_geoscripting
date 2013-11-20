@@ -39,7 +39,6 @@ plot(raster2010)
 # Put these into a new rasterbrick with nlayers
 threelayerbrick <- brick(raster2000,raster2005,raster2010)
 cols <- c("yellow",  "green", "red")
-?brewer.pal
 rtheme <- rasterTheme(region=cols)
 # plot them next to each other with good colors
 levelplot(threelayerbrick[[1:3]], names.attr=c('2000', '2005',  '2010'), par.settings=rtheme)
